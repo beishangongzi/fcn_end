@@ -154,7 +154,7 @@ def main():
                       help="load checkpoint model (default: False)")
     parser.add_option("-v", "--verbose", dest="verbose", default=100, type="int",
                       help="show information for each <verbose> iterations (default: 100)")
-    parser.add_option("-n", "--num-classes", dest="num_classes", default=2, type="int",
+    parser.add_option("-n", "--num-classes", dest="num_classes", default=5, type="int",
                       help="number of classes (default: 2)")
     parser.add_option("-d", "--back-bone", dest="back_bone", default="vgg",
                       help="backbone net (default: vgg)")

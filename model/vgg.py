@@ -14,11 +14,11 @@ from torchvision.models import vgg16
 
 
 class VGG(nn.Module):
-    def __init__(self, pretrained=True):
+    def __init__(self, pretrained=False):
         super(VGG, self).__init__()
 
         # conv1 1/2
-        self.conv1_1 = nn.Conv2d(3, 64, kernel_size=3, padding=1)
+        self.conv1_1 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
         self.relu1_1 = nn.ReLU(inplace=True)
         self.conv1_2 = nn.Conv2d(64, 64, kernel_size=3, padding=1)
         self.relu1_2 = nn.ReLU(inplace=True)
