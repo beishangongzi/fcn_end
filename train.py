@@ -136,7 +136,7 @@ def test(**kwargs):
         pred = np.argmin(pred, axis=1)
         for j, p in enumerate(path):
             im = Image.fromarray(pred.astype('uint8')[j]*255, "L")
-            im.save(os.path.join("data/testPreds", os.path.basename(p)))
+            im.save(os.path.join("data/obt/testPreds", os.path.basename(p)))
 
     end_time = time.time()
     logging.info('Testing Time: %d s' % (end_time - start_time))
@@ -201,7 +201,7 @@ def main():
 
     # dataset
     custom_dataset = CustomDataset()
-    test_set = CustomDataset("data/testImages", mode="test")
+    test_set = CustomDataset("data/obt/testImages", mode="test")
 
     train_size = int(0.9 * len(custom_dataset))
     val_size = len(custom_dataset) - train_size
